@@ -1,0 +1,22 @@
+{:deps {:aliases [:dev]}
+ :http {:port 3448}
+ :nrepl {:port 3447 :host "0.0.0.0"}
+ :dev-http {8888 "classpath:public"}
+
+ :builds
+ {:main
+  {:target :esm
+   :output-dir "target/main/"
+   :js-options {:js-provider :import}
+
+   :modules
+   {:base
+    {:entries []}
+    :main
+    {:exports {default playground.main/default}
+     :depends-on #{:base}}}
+
+   :compiler-options
+   {:output-feature-set :es2020
+    :output-wrapper false
+    :warnings {:fn-deprecated false}}}}}

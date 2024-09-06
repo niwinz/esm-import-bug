@@ -1,0 +1,25 @@
+{
+  "name": "playground-esm-build-bug",
+  "version": "1.0.0",
+  "license": "MPL-2.0",
+  "author": "Kaleidos INC",
+  "private": true,
+  "packageManager": "yarn@4.3.1",
+  "browserslist": [
+    "defaults"
+  ],
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/penpot/esm-import-bug"
+  },
+  "scripts": {
+    "watch": "clojure -M:dev:shadow-cljs watch main",
+    "compile": "clojure -M:dev:shadow-cljs compile main",
+    "release": "clojure -M:dev:shadow-cljs release main"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "ws": "^8.18.0"
+  }
+}
